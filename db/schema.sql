@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS customPC_db;
+CREATE DATABASE customPC_db;
