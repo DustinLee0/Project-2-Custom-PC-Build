@@ -112,7 +112,7 @@ function removeChoices() {
 
 
 //Monitor GET REQ FROM DATABASE
-const monitorBtn = document.querySelector('.monitor-card');
+const monitorBtn = document.querySelector('#monitor');
 
 monitorBtn.addEventListener('click', (e) => {
     const event = e.target.parentElement.id;
@@ -161,26 +161,21 @@ monitorBtn.addEventListener('click', (e) => {
             selection.append(newLi);
 
             // populate li in selected parts section when user picks component
-            const list = document.querySelector('.choice');
+            const list = document.getElementById('choices');
             list.addEventListener('click', (e) => {
                 const event = e.target.parentElement;
                 console.log(event)
                 const partName = document.querySelector('.pcPart');
                 let item = partName.textContent;
-
                 const selectLi = document.querySelector("." + item);
                 console.log(item)
 
                 // GET INFORMATION OF PC PART FROM selected parts section
-                // const img = event.childNodes[0].src;
-                const name = event.childNodes[0].innerHTML;
+                const img = event.childNodes[0].src;
+                const name = event.childNodes[1].innerHTML;
                 const link = event.childNodes[2].href;
                 const price = event.childNodes[2].children[0].innerHTML;
-
-                if (link == null) {
-                    link = 'N/A';
-                }
-                
+                console.log(img)
                 console.log(name)
                 console.log(link)
                 console.log(price)
@@ -190,12 +185,14 @@ monitorBtn.addEventListener('click', (e) => {
                 const pTag3 = document.createElement('p');
                 pTag3.setAttribute('class', item + 'Name');
                 const pTag4 = document.createElement('p');
+                const pTag5 = document.createElement('p');
 
                 pTag.innerHTML = item;
-                pTag2.innerHTML = name;
-                pTag3.innerHTML = link;
-                pTag4.innerHTML = price;
-                selectLi.append(pTag, pTag2, pTag3, pTag4)
+                pTag2.innerHTML = img;
+                pTag3.innerHTML = name;
+                pTag4.innerHTML = link;
+                pTag5.innerHTML = price;
+                selectLi.append(pTag, pTag2, pTag3, pTag4, pTag5)
                 removeChoices();
 
             })
@@ -271,7 +268,8 @@ async function saveConfig(event) {
         })
 
         if (response.ok) {
-            console.log(response);
+            document.location.replace('/myaccount');
+
         } else {
             alert(response.statusText);
         }
