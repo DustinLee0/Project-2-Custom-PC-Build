@@ -4,7 +4,7 @@
 This is the Project 2 that were given to us by the University Of Toronto in the coding bootcamp. In this challenge we have been asked to create a app using express, handlebars, express-session and creating our own data base and then creating routes for fetching data from our data base.
 
 # Completed
-by following all the instructions I am able to done this task and in this task I have completed the code by writing the js and by installing the node library such as sequelize, express, dotenv., and by creating post, get del and put req.
+by following all the instructions I am able to done this task and in this task I have completed the code by writing the js and by installing the node library such as sequelize, express, express-session, dotenv., and by creating post, get del and put req.
 
 # Result
 ![Screenshot 2022-12-14 at 11 58 27 PM](https://user-images.githubusercontent.com/111723339/207776429-0d2016a6-aa10-4fe2-9cdf-40207cd2f2ff.png)
