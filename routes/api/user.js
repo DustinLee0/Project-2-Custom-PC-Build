@@ -1,19 +1,20 @@
 const router = require('express').Router();
 // const user = require('../../Models/User');
-const {User,saveConfig}= require('../../Models')
+const { User, saveConfig } = require('../../Models')
 const sequelize = require('../../config/connection');
 
 
 router.post('/', async (req, res) => {
     try {
         const postUser = await User.create({
-            name:req.body.name,
-            email:req.body.email,
+            name: req.body.name,
+            email: req.body.email,
             password: req.body.password
         });
 
         req.session.save(() => {
             // req.session.id = postUser.id;
+            req.session.user_id = postUser.id
             req.session.logged_in = true;
         })
 
@@ -40,7 +41,7 @@ router.post('/login', async (req, res) => {
         req.session.logged_in = true;
         req.session.save(() => {
             // req.session.id = postUser.id;
-            
+            req.session.user_id = loginUser.id
         })
 
         res.json({ user: loginUser, message: 'You are now logged in!' });
@@ -49,21 +50,21 @@ router.post('/login', async (req, res) => {
 
 
 
-router.get('/', async(req,res)=>{
-    try{
-        const getUser= await User.findAll({include:[{model:saveConfig}]})
+router.get('/', async (req, res) => {
+    try {
+        const getUser = await User.findAll({ include: [{ model: saveConfig }] })
 
         res.status(200).json(getUser)
-    }catch(err){
+    } catch (err) {
         res.status(500).json(err);
     }
 })
 
 router.post('/logout', (req, res) => {
-    
-      req.session.destroy(() => {
+
+    req.session.destroy(() => {
         res.status(204).end();
-      });
     });
-  
-  module.exports = router;
+});
+
+module.exports = router;

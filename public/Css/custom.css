@@ -117,14 +117,14 @@ h5 {
     transition-duration: 1s;
 }
 
-.monitor-card>img {
+.monitor>img {
     height: 70px;
     width: 70px;
     border-radius: 5px;
     opacity: 0.8"   
 }
 
-.monitor-card {
+.monitor {
     border-radius: 5px;
     width: 100px;
     height: 100px;
@@ -132,7 +132,9 @@ h5 {
     text-align: center;
     align-items: center;
     color: lightgrey;
+    display: none;
 }
+
 
 @media (max-width: 900px) {
    #main-section-custom {
