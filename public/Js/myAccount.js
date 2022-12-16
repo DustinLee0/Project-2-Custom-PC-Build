@@ -1,4 +1,3 @@
-
 const response = fetch('http://localhost:3001/api/saveconfig', {
     method: "GET",
     headers: { 'Content-Type': 'application/json' }
@@ -21,13 +20,14 @@ const response = fetch('http://localhost:3001/api/saveconfig', {
             span.setAttribute('class', 'close')
             span.textContent = 'x'
             var modalPara = document.createElement('p')
-            modalPara.textContent = `Processor: ${results.processor}
-             Ram: ${results.ram}
+            modalPara.textContent = `
+             Processor: ${results.processor} 
+             Ram: ${results.ram} 
              Storage: ${results.storage} 
-             Motherboard: ${results.motherboard}
+             Motherboard: ${results.motherboard} 
              keyboard: ${results.keyboard} 
-             GPU: ${results.gpu}
-             Cases: ${results.cases}
+             GPU: ${results.gpu} 
+             Cases: ${results.cases} 
              Casefan: ${results.casefan}
               `
             modalContent.appendChild(span)
@@ -84,4 +84,5 @@ const response = fetch('http://localhost:3001/api/saveconfig', {
     .catch(err => {
         console.log(err);
     })
+
 

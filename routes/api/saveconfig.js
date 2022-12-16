@@ -4,6 +4,7 @@ const { User, saveConfig } = require('../../Models')
 const sequelize = require('../../config/connection');
 
 router.post('/', async (req, res) => {
+
     try {
         const postConfig = await saveConfig.create(
             {
@@ -17,7 +18,6 @@ router.post('/', async (req, res) => {
                 casefan: req.body.casefan,
                 cpu: req.body.cpu,
                 // monitor: req.body.monitor,
-                user_id: req.body.user_id
             }
         );
 
