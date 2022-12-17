@@ -1,4 +1,4 @@
-const  Monitor = require('../models/Monitor');
+const  Monitor = require('../Models/Monitor');
 
 const monitorData = [
   {
