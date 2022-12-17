@@ -1,8 +1,8 @@
 async function logIn(event){
     event.preventDefault()
     try{
-        const emailLogIn = document.querySelector("#loginEmail").value.trim();
-        const passwordLogIn = document.querySelector("#loginPassword").value.trim();
+        const emailLogIn = document.querySelector("#loginEmail").value;
+        const passwordLogIn = document.querySelector("#loginPassword").value;
         // console.log(email)
 
         if (emailLogIn && passwordLogIn){
