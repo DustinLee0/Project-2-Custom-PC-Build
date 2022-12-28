@@ -49,7 +49,7 @@ budgetPC.addEventListener('click', (e) => {
   const event = e.target.parentElement.id;
   console.log('buttonclicked: ', event);
 
-  fetch('http://localhost:3001/api/prebuild/', {
+  fetch('/api/prebuild/', {
     method: "GET",
     headers: { 'Content-Type': 'application/json' }
   })
@@ -119,7 +119,7 @@ midPC.addEventListener('click', (e) => {
   const event = e.target.parentElement.id;
   console.log('buttonclicked: ', event);
 
-  fetch('http://localhost:3001/api/prebuild/', {
+  fetch('/api/prebuild/', {
     method: "GET",
     headers: { 'Content-Type': 'application/json' }
   })
@@ -188,7 +188,7 @@ highPC.addEventListener('click', (e) => {
   const event = e.target.parentElement.id;
   console.log('buttonclicked: ', event);
 
-  fetch('http://localhost:3001/api/prebuild/', {
+  fetch('/api/prebuild/', {
     method: "GET",
     headers: { 'Content-Type': 'application/json' }
   })
@@ -257,7 +257,7 @@ proEditPC.addEventListener('click', (e) => {
   const event = e.target.parentElement.id;
   console.log('buttonclicked: ', event);
 
-  fetch('http://localhost:3001/api/prebuild/', {
+  fetch('/api/prebuild/', {
     method: "GET",
     headers: { 'Content-Type': 'application/json' }
   })
@@ -326,7 +326,7 @@ superEditPC.addEventListener('click', (e) => {
   const event = e.target.parentElement.id;
   console.log('buttonclicked: ', event);
 
-  fetch('http://localhost:3001/api/prebuild/', {
+  fetch('/api/prebuild/', {
     method: "GET",
     headers: { 'Content-Type': 'application/json' }
   })

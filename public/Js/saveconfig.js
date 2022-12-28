@@ -120,7 +120,7 @@ monitorBtn.addEventListener('click', (e) => {
     pcPart.innerHTML = event;
     console.log('clicked: ', event)
 
-    fetch('http://localhost:3001/api/monitor', {
+    fetch('/api/monitor', {
         method: "GET",
         headers: { 'Content-Type': 'application/json' }
     })
@@ -250,7 +250,7 @@ async function saveConfig(event) {
         // const postMonitor = document.querySelector(".monitorName").innerHTML;
         // console.log(postMonitor)
         // console.log(`Cases ${postCases}`)
-        const response = await fetch('http://localhost:3001/api/saveconfig', {
+        const response = await fetch('/api/saveconfig', {
             method: 'POST',
             body: JSON.stringify({
                 processor: postProcessor,
