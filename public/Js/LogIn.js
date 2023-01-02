@@ -6,7 +6,7 @@ async function logIn(event){
         // console.log(email)
 
         if (emailLogIn && passwordLogIn){
-            const response= await fetch(`${process.env.PORT}/api/user/login`,{
+            const response= await fetch(`/api/user/login`,{
                 method:'POST',
                 body: JSON.stringify({email:emailLogIn,password:passwordLogIn}),
                 headers: { 'Content-Type': 'application/json' }

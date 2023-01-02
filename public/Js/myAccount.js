@@ -1,4 +1,4 @@
-const response = fetch(`${process.env.PORT}/api/saveconfig`, {
+const response = fetch(`/api/saveconfig`, {
     method: "GET",
     headers: { 'Content-Type': 'application/json' }
 })
@@ -54,7 +54,7 @@ const response = fetch(`${process.env.PORT}/api/saveconfig`, {
                 // Get the <span> element that closes the modal
                 var span = document.getElementsByClassName("close")[0];
                 document.getElementById(`delbtn${this.id} `).onclick = async function () {
-                    await fetch(`${process.env.PORT}/api/saveconfig/${this.value}`, {
+                    await fetch(`/api/saveconfig/${this.value}`, {
                         method: "DELETE",
                         headers: { 'Content-Type': 'application/json' }
                     })
