@@ -4,8 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "node seeds/index.js",
-    "start": "node server.js"
+    "start": "node server.js && node seeds/index.js"
   },
   "repository": {
     "type": "git",
