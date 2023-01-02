@@ -6,7 +6,7 @@ async function signUp(event){
         const fName= document.querySelector('#f-name').value;
         const emailSignUp = document.querySelector("#signup-email").value;
         const passwordSignUp = document.querySelector("#psw1").value;
-        const response= await fetch(`${process.env.PORT}/api/user`, {
+        const response= await fetch(`/api/user`, {
             method:'POST',
             body: JSON.stringify({name:fName, email:emailSignUp, password:passwordSignUp}),
 
