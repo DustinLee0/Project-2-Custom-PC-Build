@@ -49,7 +49,7 @@ budgetPC.addEventListener('click', (e) => {
   const event = e.target.parentElement.id;
   console.log('buttonclicked: ', event);
 
-  fetch('/api/prebuild/', {
+  fetch(`${process.env.PORT}/api/prebuild/`, {
     method: "GET",
     headers: { 'Content-Type': 'application/json' }
   })
